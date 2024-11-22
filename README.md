@@ -1,2 +1,2 @@
-# eventosplatinum-website
-Página web pública para Eventos Platinum Version 2
+# eventosplatinumwebpage
+Página web pública de eventos platinum
