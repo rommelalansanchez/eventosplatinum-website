@@ -14,11 +14,14 @@ var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
     .ConfigureServices(services =>
     {
+        
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-        services.AddHttpClient("EventosPlatinumApi", client =>
+        services.AddHttpClient("EventosPlatinumApi", (provider, client)  =>
         {
-            client.BaseAddress = new Uri("https://localhost:44345/api/");
+            var configuration = provider.GetRequiredService<IConfiguration>();
+            var apiUrl = configuration.GetSection("AdminAppApiUrl")?.Value?.ToString() ?? "";
+            client.BaseAddress = new Uri(apiUrl);
         });
     })
     .Build();
