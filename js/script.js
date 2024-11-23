@@ -62,7 +62,7 @@
 
     document.getElementById("btnReservar").disabled = true;
 
-    fetch("http://localhost:7093/api/Reservar", options)
+    fetch("api/Reservar", options)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Ocurrió un error al reservar.");

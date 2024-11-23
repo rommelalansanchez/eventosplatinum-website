@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|c:\\proyectos\\eventos platinum\\apps\\eventosplatinum-website\\api\\solicitudreservacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|solutionrelative:api\\solicitudreservacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|c:\\proyectos\\eventos platinum\\apps\\eventosplatinum-website\\api\\reservar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|solutionrelative:api\\reservar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|c:\\proyectos\\eventos platinum\\apps\\eventosplatinum-website\\api\\solicitudreservacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|solutionrelative:api\\solicitudreservacion.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D24B1745-EB8F-4F45-825D-7BDD27D4FCFC}|api\\api.csproj|c:\\proyectos\\eventos platinum\\apps\\eventosplatinum-website\\api\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,16 +66,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SolicitudReservacion.html",
               "DocumentMoniker": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\SolicitudReservacion.html",
               "RelativeDocumentMoniker": "api\\SolicitudReservacion.html",
               "ToolTip": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\SolicitudReservacion.html",
               "RelativeToolTip": "api\\SolicitudReservacion.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-23T00:52:43.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:52:43.597Z"
             },
             {
               "$type": "Document",
@@ -100,18 +99,17 @@
               "RelativeToolTip": "api\\local.settings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T00:33:39.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:33:39.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Reservar.cs",
               "DocumentMoniker": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\Reservar.cs",
               "RelativeDocumentMoniker": "api\\Reservar.cs",
               "ToolTip": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\Reservar.cs",
               "RelativeToolTip": "api\\Reservar.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCwAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T00:32:22.155Z",
               "EditorCaption": ""
@@ -126,8 +124,7 @@
               "RelativeToolTip": "api\\ContactoTrigger.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:19:34.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:19:34.263Z"
             },
             {
               "$type": "Document",
@@ -139,8 +136,7 @@
               "RelativeToolTip": "api\\Common.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIAwwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:18:16.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:18:16.051Z"
             },
             {
               "$type": "Document",
@@ -152,8 +148,7 @@
               "RelativeToolTip": "api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T00:17:47.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:17:47.246Z"
             },
             {
               "$type": "Document",
@@ -165,8 +160,7 @@
               "RelativeToolTip": "api\\Models\\Reservacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:17:42.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:17:42.663Z"
             },
             {
               "$type": "Document",
@@ -178,8 +172,7 @@
               "RelativeToolTip": "api\\Models\\Email.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:17:41.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:17:41.09Z"
             },
             {
               "$type": "Document",
@@ -191,21 +184,19 @@
               "RelativeToolTip": "api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:16:22.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:16:22.972Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "api",
+              "Title": "api.csproj",
               "DocumentMoniker": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\api.csproj",
               "RelativeDocumentMoniker": "api\\api.csproj",
               "ToolTip": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\api.csproj",
               "RelativeToolTip": "api\\api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-23T00:12:11.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:12:11.227Z"
             },
             {
               "$type": "Document",
@@ -216,8 +207,7 @@
               "ToolTip": "C:\\Proyectos\\Eventos Platinum\\Apps\\eventosplatinum-website\\api\\api.csproj",
               "RelativeToolTip": "api\\api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-23T00:11:55.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T00:11:55.581Z"
             }
           ]
         }
