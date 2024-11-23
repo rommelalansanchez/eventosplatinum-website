@@ -17,6 +17,15 @@
       />
       <link rel="stylesheet" href="css/font-awesome.css" />
       <link rel="stylesheet" href="css/bootstrap.css" />
+      <link
+        href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet"
+      />
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+      <link
+        href="assets/vendor/glightbox/css/glightbox.min.css"
+        rel="stylesheet"
+      />
       <link rel="stylesheet" href="css/styles.css" />
       <title>Eventos Platinum</title>
     </head>
@@ -144,144 +153,308 @@
     </section>
 
     <!-- Galeria -->
-    <section id="galeria">
+    <section id="galeria" class="portfolio section">
       <div class="container">
-        <div class="row">
-          <div class="col-12 bg-primary pt-4 text-center pb-5">
-            <h2>GALERÍA</h2>
-          </div>
-        </div>
-        <div class="row mt-n5 g-0">
-          <div class="col-12">
-            <!-- Image Slider -->
+        <div
+          class="isotope-layout"
+          data-default-filter="*"
+          data-layout="masonry"
+          data-sort="original-order"
+        >
+          <div
+            class="row gy-4 isotope-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div
-              id="galeriaCarousel"
-              class="carousel slide"
-              data-bs-ride="carousel"
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
             >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="3"
-                  aria-label="Slide 4"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="4"
-                  aria-label="Slide 5"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="5"
-                  aria-label="Slide 6"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#galeriaCarousel"
-                  data-bs-slide-to="6"
-                  aria-label="Slide 7"
-                ></button>
+              <img src="img/eventos-1.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-1.jpg"
+                  title="App 1"
+                  data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
               </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME1.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 1"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME2.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 2"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME4.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 3"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/Frame5.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 4"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME6.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 5"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME8.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 6"
-                  />
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                  <img
-                    src="images/FRAME9.png"
-                    class="d-block w-100"
-                    alt="Sala de Eventos 7"
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#galeriaCarousel"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#galeriaCarousel"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <img src="img/eventos-2.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Product 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-2.jpg"
+                  title="Product 1"
+                  data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-3.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-3.jpg"
+                  title="Branding 1"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+            >
+              <img src="img/eventos-4.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-4.jpg"
+                  title="App 2"
+                  data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <img src="img/eventos-5.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-5.jpg"
+                  title="Product 2"
+                  data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-6.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-6.jpg"
+                  title="Branding 2"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+            >
+              <img src="img/eventos-7.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-7.jpg"
+                  title="App 3"
+                  data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <img src="img/eventos-8.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-8.jpg"
+                  title="Product 3"
+                  data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-9.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-9.jpg"
+                  title="Branding 2"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-10.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-10.jpg"
+                  title="Branding 2"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-11.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-11.jpg"
+                  title="Branding 2"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- End Portfolio Item -->
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <img src="img/eventos-12.jpg" class="img-fluid" alt="" />
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a
+                  href="img/eventos-12.jpg"
+                  title="Branding 2"
+                  data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"
+                  ><i class="bi bi-zoom-in"></i
+                ></a>
+                <a
+                  href="portfolio-details.html"
+                  title="More Details"
+                  class="details-link"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- End Portfolio Item -->
           </div>
+          <!-- End Portfolio Container -->
         </div>
       </div>
     </section>
@@ -426,6 +599,10 @@
       </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
