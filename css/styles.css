@@ -1,0 +1,317 @@
+:root {
+  --heading-color: #3b434a; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: var(--bs-primary);
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --heading-color2: #000; /* Color for headings, subheadings and title throughout the website */
+}
+
+body {
+  color: #fbf9f5;
+}
+
+.btn {
+  height: 48px;
+  color: #fbf9f5;
+}
+
+.btn:hover {
+  color: #fbf9f5;
+}
+
+.nav-link {
+  color: #a08820;
+}
+
+.nav-link:hover {
+  color: #e9d480;
+}
+
+.header {
+  height: 750px;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/HOMEPAGE.png") center center no-repeat;
+  background-size: cover;
+}
+
+.dark-link-icon .fa-square {
+  color: #000;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+}
+.dark-link-icon .fa-square:hover {
+  border-color: #e9d480;
+}
+
+.dark-link-icon .fab {
+  color: #fff;
+}
+
+.dark-link-icon .fab:hover {
+  color: #e9d480;
+}
+.navbar {
+  transition: all 0.8s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+
+.navbar-transparent {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-link-secondary {
+  color: #fbf9f5;
+}
+
+.navbar-toggler-primary {
+  border-color: #a08820;
+}
+
+.carousel-item img {
+  height: 640px;
+}
+
+#logo1 {
+  transition: all 0.5s ease-in-out;
+}
+
+button.carousel-control-prev span,
+button.carousel-control-next span {
+  opacity: 1;
+  background-color: #a08820;
+  border-radius: 20px;
+  padding: 1.1rem;
+}
+
+#Reservacion label {
+  color: rgb(33, 37, 41);
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    background: var(--bs-dark);
+  }
+  button.carousel-control-prev span,
+  button.carousel-control-next span {
+    opacity: 0.8;
+    background-color: #a08820;
+    border-radius: 20px;
+    padding: 1.5rem;
+  }
+}
+
+.section-title {
+  text-align: center;
+  padding: 30px 15px 0;
+  position: relative;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title span {
+  position: absolute;
+  top: 4px;
+  color: color-mix(in srgb, var(--heading-color), transparent 95%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 46px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/*--------------------------------------------------------------
+# Espacios
+--------------------------------------------------------------*/
+.espacios .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.espacios .service-item:before {
+  content: "";
+  position: absolute;
+  background: var(--accent-color);
+  inset: 100% 0 0 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.espacios .service-item .icon {
+  margin-bottom: 10px;
+}
+
+.espacios .service-item .icon i {
+  color: var(--accent-color);
+  font-size: 36px;
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--heading-color2);
+}
+
+.espacios .service-item h4 a {
+  color: var(--heading-color2);
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item:hover h4 a,
+.espacios .service-item:hover .icon i,
+.espacios .service-item:hover p {
+  color: var(--contrast-color);
+}
+
+.espacios .service-item:hover:before {
+  background: var(--accent-color);
+  inset: 0;
+  border-radius: 0px;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: #ffffff;
+}
+
+.gallery .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+  background: #272727;
+}
+
+.glightbox-clean .gslide-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Contacto
+--------------------------------------------------------------*/
+.contacto .info-item i {
+  font-size: 20px;
+  color: var(--bs-primary-rgb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacto .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contacto .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.contacto .info-item a {
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .contacto .info-item.info-item-borders {
+    border-left: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 85%);
+    border-right: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 85%);
+  }
+}
+
+.reservacion {
+  margin-top: 60px;
+}
+.reservacion .section-title {
+  margin-bottom: 30px;
+}
+#form_reservacion {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#form_reservacion label {
+  font-weight: bold;
+}
