@@ -29,7 +29,19 @@
 
   document.addEventListener("DOMContentLoaded", userScroll);
 
+  const showMessage = (element) => {
+    document.querySelector(element).classList.remove("d-none");
+    document.querySelector(element).classList.add("d-block");
+  };
+  const hideMessage = (element) => {
+    document.querySelector(element).classList.remove("d-block");
+    document.querySelector(element).classList.add("d-none");
+  };
+
   const reservar = () => {
+    showMessage(".loading");
+    hideMessage(".sent-message");
+
     const fecha = document.getElementById("fecha_evento").value;
     const nombre = document.getElementById("nombre_interesado").value;
     const correo = document.getElementById("correo_interesado").value;
@@ -62,16 +74,28 @@
 
     document.getElementById("btnReservar").disabled = true;
 
-    fetch("api/Reservar", options)
+    var url = "http://localhost:7078/api/Reservar";
+    fetch(url, options)
       .then((response) => {
+        document.getElementById("btnReservar").disabled = false;
+        hideMessage(".loading");
         if (!response.ok) {
-          throw new Error("Ocurrió un error al reservar.");
+          throw new Error("Ocurrió un error al enviar.");
         }
         return response.json();
       })
       .then((data) => {
-        mostrarMensajeReserva();
-        document.getElementById("btnReservar").disabled = false;
+        if (data.success) {
+          showMessage(".sent-message");
+        } else {
+          throw new Error(
+            data.Message
+              ? data.Message
+              : data.message
+              ? data.message
+              : "Form submission failed."
+          );
+        }
       })
       .catch((error) => {
         console.error("Fetch error:", error);
@@ -81,24 +105,8 @@
   let formRes = document.getElementById("form_reservacion");
   formRes.addEventListener("submit", (e) => {
     e.preventDefault();
-    ocultarMensajeReserva();
-
     reservar();
   });
-
-  const ocultarMensajeReserva = () => {
-    const msg = document.getElementById("MensajeReserva");
-    if (!msg.classList.contains("d-none")) {
-      msg.classList.add("d-none");
-    }
-  };
-
-  const mostrarMensajeReserva = () => {
-    const msg = document.getElementById("MensajeReserva");
-    if (msg.classList.contains("d-none")) {
-      msg.classList.remove("d-none");
-    }
-  };
 
   /**
    * Animation on scroll function and init

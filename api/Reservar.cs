@@ -26,33 +26,41 @@ namespace Eventos.Platinum.Azure.Functions
         [Function("Reservar")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
         {
-            var body = await new StreamReader(req.Body).ReadToEndAsync();
-            var model = JsonConvert.DeserializeObject<Reservacion>(body);
-
-            // var client = _httpClientFactory.CreateClient("EventosPlatinumApi");
-            // var authToken = await Common.AuthenticateAndGetToken(client);
-
-            var email = new Email
+            try
             {
-                Destinatarios = new() { _configuration.GetSection("DestinatarioNotificaciones")?.Value?.ToString() ?? "" },
-                Asunto = "Nueva Solicitud de Reservación",
-                Mensaje = Common.PlantillaReservacion(model.Nombre, model.Correo, model.Telefono, model.EventoTipo, model.NumeroPersonas, model.Horario)
-            };
-                
-            EmailSender emailSender = new EmailSender();
-            emailSender.SetSmtpServer(Environment.GetEnvironmentVariable("EmailSmtpServer")!);
-            emailSender.SetPort(Convert.ToInt16(Environment.GetEnvironmentVariable("EmailPort")!));
-            emailSender.SetAccountSending(Environment.GetEnvironmentVariable("EmailAccount")!);
-            emailSender.SetPassword(Environment.GetEnvironmentVariable("EmailPassword")!);
+                var body = await new StreamReader(req.Body).ReadToEndAsync();
+                var model = JsonConvert.DeserializeObject<Reservacion>(body) ?? new Reservacion();
 
-            emailSender.Send(email.Destinatarios, email.Asunto, email.Mensaje, "Notificaciones Eventos Platinum");
-            // client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken?.Replace("\"", ""));
-            // var response = await client.PostAsJsonAsync($"email/enviar", email) ?? throw new Exception("Response is empty.");
-            // var responseContent = response.Content;
-            // var content2 = await responseContent.ReadFromJsonAsync<ServiceResponse<List<object>>>();
-            // var salasDisponibles = content2?.ProcessResponse(response.StatusCode, await response.Content.ReadAsStringAsync());
+                // var client = _httpClientFactory.CreateClient("EventosPlatinumApi");
+                // var authToken = await Common.AuthenticateAndGetToken(client);
 
-            return new OkObjectResult(model);
+                var email = new Email
+                {
+                    Destinatarios = new() { _configuration.GetSection("DestinatarioNotificaciones")?.Value?.ToString() ?? "" },
+                    Asunto = "Nueva Solicitud de Reservación",
+                    Mensaje = Common.PlantillaReservacion(model?.Nombre!, model?.Correo!, model?.Telefono!, model?.EventoTipo!, model?.NumeroPersonas ?? 0, model?.Horario!)
+                };
+
+                EmailSender emailSender = new EmailSender();
+                emailSender.SetSmtpServer(Environment.GetEnvironmentVariable("EmailSmtpServer")!);
+                emailSender.SetPort(Convert.ToInt16(Environment.GetEnvironmentVariable("EmailPort")!));
+                emailSender.SetAccountSending(Environment.GetEnvironmentVariable("EmailAccount")!);
+                emailSender.SetPassword(Environment.GetEnvironmentVariable("EmailPassword")!);
+
+                emailSender.Send(email.Destinatarios, email.Asunto, email.Mensaje, "Notificaciones Eventos Platinum");
+                // client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken?.Replace("\"", ""));
+                // var response = await client.PostAsJsonAsync($"email/enviar", email) ?? throw new Exception("Response is empty.");
+                // var responseContent = response.Content;
+                // var content2 = await responseContent.ReadFromJsonAsync<ServiceResponse<List<object>>>();
+                // var salasDisponibles = content2?.ProcessResponse(response.StatusCode, await response.Content.ReadAsStringAsync());
+
+                return new OkObjectResult(new { Success = true });
+            }
+            catch (Exception ex)
+            {
+                return new OkObjectResult(new { Message = $"Error al procesar petición. {ex.Message}" });
+            }
+
         }
     }
 }

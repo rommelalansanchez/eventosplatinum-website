@@ -1,5 +1,6 @@
 :root {
   --heading-color: #3b434a; /* Color for headings, subheadings and title throughout the website */
+  --text-primary: rgb(var(--bs-primary-rgb));
 }
 
 body {
@@ -52,6 +53,8 @@ body {
 }
 .navbar {
   transition: all 0.8s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 5px;
 }
 
 .navbar-transparent {
@@ -139,7 +142,6 @@ button.carousel-control-next span {
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .gallery .gallery-item img {
@@ -194,4 +196,108 @@ button.carousel-control-next span {
 .glightbox-clean .gslide-title {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Contacto
+--------------------------------------------------------------*/
+.contacto .info-item i {
+  font-size: 20px;
+  color: var(--bs-primary-rgb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacto .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contacto .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.contacto .info-item a {
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .contacto .info-item.info-item-borders {
+    border-left: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 85%);
+    border-right: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 85%);
+  }
+}
+
+.contacto .php-email-form {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 575px) {
+  .contacto .php-email-form {
+    padding: 20px;
+  }
+}
+
+.contacto .php-email-form input[type="text"],
+.contacto .php-email-form input[type="email"],
+.contacto .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  /* color: var(--default-color); */
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contacto .php-email-form input[type="text"]:focus,
+.contacto .php-email-form input[type="email"]:focus,
+.contacto .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contacto .php-email-form input[type="text"]::placeholder,
+.contacto .php-email-form input[type="email"]::placeholder,
+.contacto .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contacto .php-email-form button[type="submit"] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contacto .php-email-form button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.reservacion {
+  margin-top: 60px;
+}
+.reservacion .section-title {
+  margin-bottom: 30px;
+}
+#form_reservacion {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#form_reservacion label {
+  font-weight: bold;
 }
