@@ -74,7 +74,7 @@
 
     document.getElementById("btnReservar").disabled = true;
 
-    var url = "http://localhost:7078/api/Reservar";
+    var url = "api/Reservar";
     fetch(url, options)
       .then((response) => {
         document.getElementById("btnReservar").disabled = false;
