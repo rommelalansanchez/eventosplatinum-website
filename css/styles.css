@@ -1,6 +1,9 @@
 :root {
   --heading-color: #3b434a; /* Color for headings, subheadings and title throughout the website */
-  --text-primary: rgb(var(--bs-primary-rgb));
+  --accent-color: var(--bs-primary);
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --heading-color2: #000; /* Color for headings, subheadings and title throughout the website */
 }
 
 body {
@@ -137,6 +140,70 @@ button.carousel-control-next span {
 }
 
 /*--------------------------------------------------------------
+# Espacios
+--------------------------------------------------------------*/
+.espacios .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.espacios .service-item:before {
+  content: "";
+  position: absolute;
+  background: var(--accent-color);
+  inset: 100% 0 0 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.espacios .service-item .icon {
+  margin-bottom: 10px;
+}
+
+.espacios .service-item .icon i {
+  color: var(--accent-color);
+  font-size: 36px;
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--heading-color2);
+}
+
+.espacios .service-item h4 a {
+  color: var(--heading-color2);
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.espacios .service-item:hover h4 a,
+.espacios .service-item:hover .icon i,
+.espacios .service-item:hover p {
+  color: var(--contrast-color);
+}
+
+.espacios .service-item:hover:before {
+  background: var(--accent-color);
+  inset: 0;
+  border-radius: 0px;
+}
+
+/*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
 .gallery .gallery-item {
@@ -232,59 +299,6 @@ button.carousel-control-next span {
     border-right: 1px solid
       color-mix(in srgb, var(--default-color), transparent 85%);
   }
-}
-
-.contacto .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-@media (max-width: 575px) {
-  .contacto .php-email-form {
-    padding: 20px;
-  }
-}
-
-.contacto .php-email-form input[type="text"],
-.contacto .php-email-form input[type="email"],
-.contacto .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  /* color: var(--default-color); */
-  background-color: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 50%
-  );
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contacto .php-email-form input[type="text"]:focus,
-.contacto .php-email-form input[type="email"]:focus,
-.contacto .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contacto .php-email-form input[type="text"]::placeholder,
-.contacto .php-email-form input[type="email"]::placeholder,
-.contacto .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contacto .php-email-form button[type="submit"] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contacto .php-email-form button[type="submit"]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .reservacion {
